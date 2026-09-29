@@ -1,13 +1,13 @@
-# Hi, I'm [Your Name] 👋
+# Hi, I'm [Harrison Oshomoh] 👋
 
-**[Your Title], e.g. PhD Candidate / Postdoctoral Researcher / Research Scientist**
-[Your Institution or Lab] · [City, Country]
+**Assistant Lecturer, Ph.D Candidate
+[Department of Software Engineering, Obafemi Awolowo University] · [Ile-Ife, Nigeria]
 
 [![Google Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=flat&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=YOUR_ID)
-[![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=flat&logo=orcid&logoColor=white)](https://orcid.org/YOUR-ORCID)
-[![Website](https://img.shields.io/badge/Website-000000?style=flat&logo=safari&logoColor=white)](https://your-website.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-handle)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:you@university.edu)
+[![ORCID](https://img.shields.io/badge/ORCID-A6CE39?style=flat&logo=orcid&logoColor=white)]([(https://orcid.org/my-orcid?orcid=0009-0005-7786-5832)])
+[![Website](https://img.shields.io/badge/Website-000000?style=flat&logo=safari&logoColor=white)](https://hmoshomoh.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/harrisonoshomoh)
+[![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:hmoshomoh@oauife.edu.ng)
 
 ---
 
@@ -19,10 +19,10 @@ Right now I'm working on **[current project]** and interested in collaborating o
 
 ## 🧭 Research Interests
 
-- [Interest 1, e.g. Causal inference in observational data]
-- [Interest 2, e.g. Reproducible computational pipelines]
-- [Interest 3, e.g. Bayesian modeling for health outcomes]
-- [Interest 4]
+- [Interest 1, Software Engineering]
+- [Interest 2, Requirement Engineering]
+- [Interest 3, AI Driven Software Systems/Software Engineering]
+- [Interest 4, Human Computer Interaction]
 
 ## 📄 Selected Publications
 
@@ -53,9 +53,14 @@ Full list on [Google Scholar](https://scholar.google.com/citations?user=YOUR_ID)
 
 ## 🎓 Education & Experience
 
-- **[Degree], [Institution]** ([Years]). Advisor: [Name]. Thesis: *[Title]*
-- **[Position], [Lab/Company]** ([Years]). [One-line summary of what you did]
-- **[Position], [Lab/Company]** ([Years]). [One-line summary]
+- **[B.Sc Computer Science], [Western Delta University]** ([2017]).
+- **[M.Sc Computer Science], [University of Benin]** ([2021]).
+- **[Assistant Lacturer], [Department of Software Engineering/Obafemi Awolowo University]** ([2026 - Till Date]). [One-line summary of what you did]
+- **[Lecturer III], [Edo State College of Nursing Sciences]** ([Nov. 2024 - Dec. 2025]). [One-line summary]
+- **[Ag. Director], [Department of Policy, Planning, Research, and Statistics/Edo State Ministry of Environment and Sustainability]** ([Sept. 2024 - Nov. 2025]). [One-line summary]
+- **[Program Analyst/Head, ICT Uni], [Edo State Ministry of Environment and Sustainability]** ([Aug. 2021 - Sept. 2024]). [One-line summary]
+- **[Graduate Assistant], [Department of Mathematics and Computer Science/Western Delta University]** ([July. 2021 - Feb. 2022]). [One-line summary]
+
 
 ## 🏆 Honors, Talks & Service
 
@@ -70,7 +75,7 @@ Full list on [Google Scholar](https://scholar.google.com/citations?user=YOUR_ID)
 
 ## 📫 Get in Touch
 
-I'm happy to chat about research, collaborations, or reproducibility. Email me at **you@university.edu**.
+I'm happy to chat about research, collaborations, or reproducibility. Email me at **hmoshomoh@oauife.edu.ng**.
 
 ---
 
