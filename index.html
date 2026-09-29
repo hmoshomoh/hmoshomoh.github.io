@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name, Researcher</title>
+<meta name="description" content="Academic homepage of Your Name: research on [your topic].">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="avatar" aria-hidden="true">YN</div>
+  <!-- To use a photo instead: <div class="avatar"><img src="photo.jpg" alt="Your Name"></div> -->
+  <h1>Your Name</h1>
+  <p>PhD Candidate in [Field]</p>
+  <p>[Lab], [University]</p>
+  <nav aria-label="Main">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <ul class="links">
+    <li><a href="mailto:you@university.edu">you@university.edu</a></li>
+    <li><a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></li>
+    <li><a href="https://github.com/your-username">GitHub</a></li>
+    <li><a href="https://orcid.org/0000-0000-0000-0000">ORCID</a></li>
+    <li><a href="cv.pdf">Curriculum vitae (PDF)</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h2 id="about">About</h2>
+  <p class="lede">I study [your core research question in one plain sentence], using [methods].</p>
+  <p>I'm a [year]-year PhD candidate at [University], advised by <a href="#">[Advisor]</a>. Before this I completed a [degree] at [Institution]. My work connects [Field A] and [Field B], and I'm currently focused on [current project].</p>
+  <p>I'm looking for collaborators on [topic] and I'm on the job market for [postdocs / research positions] starting [date].</p>
+
+  <h2 id="interests">Research interests</h2>
+  <ul>
+    <li>[Interest one, e.g. causal inference for observational health data]</li>
+    <li>[Interest two, e.g. reproducible computational pipelines]</li>
+    <li>[Interest three]</li>
+  </ul>
+
+  <h2 id="recent">Recent publications</h2>
+  <ul class="pubs">
+    <li>
+      <div class="t">[Paper title goes here]</div>
+      <div class="a"><span class="me">Your Name</span>, Coauthor One, Coauthor Two</div>
+      <div class="v"><em>Journal Name</em>, 2025</div>
+      <div class="l"><a href="#">Paper</a><a href="#">Code</a><a href="#">Data</a></div>
+    </li>
+    <li>
+      <div class="t">[Second paper title]</div>
+      <div class="a">Coauthor One, <span class="me">Your Name</span></div>
+      <div class="v"><em>Conference Name</em>, 2024</div>
+      <div class="l"><a href="#">Paper</a><a href="#">Slides</a></div>
+    </li>
+  </ul>
+  <p><a href="publications.html">See all publications</a></p>
+
+  <h2 id="news">News</h2>
+  <ul class="news">
+    <li><time datetime="2025-09">Sep 2025</time><span>Paper accepted at [Venue].</span></li>
+    <li><time datetime="2025-06">Jun 2025</time><span>Gave an invited talk at [Event].</span></li>
+    <li><time datetime="2025-01">Jan 2025</time><span>Started a research visit at [Institution].</span></li>
+  </ul>
+
+  <h2 id="contact">Contact</h2>
+  <p>The best way to reach me is by email at <a href="mailto:you@university.edu">you@university.edu</a>. My office is [Building, Room], [University].</p>
+
+  <footer>Last updated <span id="u"></span>. <script>document.getElementById('u').textContent=new Date(document.lastModified).toLocaleDateString('en',{month:'long',year:'numeric'})</script></footer>
+</main>
+</div>
+</body>
+</html>

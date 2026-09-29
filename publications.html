@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications | Your Name</title>
+<meta name="description" content="Publications by Your Name.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="avatar" aria-hidden="true">YN</div>
+  <h1>Your Name</h1>
+  <p>PhD Candidate in [Field]</p>
+  <p>[Lab], [University]</p>
+  <nav aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="publications.html" aria-current="page">Publications</a>
+    <a href="index.html#news">News</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <ul class="links">
+    <li><a href="mailto:you@university.edu">you@university.edu</a></li>
+    <li><a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></li>
+    <li><a href="https://github.com/your-username">GitHub</a></li>
+  </ul>
+</aside>
+
+<main>
+  <h2>Publications</h2>
+  <p>Also on <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>. An asterisk (*) marks equal contribution.</p>
+
+  <div class="tools" role="group" aria-label="Filter publications">
+    <button type="button" data-type="all" aria-pressed="true">All</button>
+    <button type="button" data-type="journal" aria-pressed="false">Journal</button>
+    <button type="button" data-type="conference" aria-pressed="false">Conference</button>
+    <button type="button" data-type="preprint" aria-pressed="false">Preprint</button>
+    <input type="search" id="q" placeholder="Search title, author, venue" aria-label="Search publications">
+  </div>
+  <div id="count" aria-live="polite"></div>
+
+  <div id="list"></div>
+</main>
+</div>
+
+<script>
+// Edit this list. Newest first. Use "type": "journal" | "conference" | "preprint".
+// Links: any of paper, code, data, slides, poster, preprint. Leave out what you don't have.
+const PUBS = [
+  {year:2025,type:"journal",title:"[Paper title one]",authors:["Your Name","Coauthor One","Coauthor Two"],venue:"Journal Name, 12(3), 100-115",links:{paper:"#",code:"#",data:"#"}},
+  {year:2025,type:"preprint",title:"[Preprint title]",authors:["Coauthor One","Your Name"],venue:"arXiv:0000.00000",links:{preprint:"#",code:"#"}},
+  {year:2024,type:"conference",title:"[Conference paper title]",authors:["Your Name*","Coauthor One*","Advisor Name"],venue:"Proceedings of Conference Name (Oral)",links:{paper:"#",slides:"#",poster:"#"}},
+  {year:2023,type:"journal",title:"[Earlier paper title]",authors:["Coauthor One","Your Name"],venue:"Journal Name, 9(1), 20-34",links:{paper:"#"}}
+];
+const ME = "Your Name"; // bold your own name (must match the spelling above)
+const LABELS = {paper:"Paper",preprint:"Preprint",code:"Code",data:"Data",slides:"Slides",poster:"Poster"};
+const list = document.getElementById('list'), count = document.getElementById('count');
+const q = document.getElementById('q'), btns = [...document.querySelectorAll('[data-type]')];
+let type = 'all';
+
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+function render(){
+  const term = q.value.trim().toLowerCase();
+  const shown = PUBS.filter(p =>
+    (type==='all' || p.type===type) &&
+    (!term || (p.title+' '+p.authors.join(' ')+' '+p.venue).toLowerCase().includes(term)));
+  let html = '', y = null;
+  for (const p of shown){
+    if (p.year !== y){ if (y!==null) html += '</ul>'; y = p.year; html += `<h3 class="year">${y}</h3><ul class="pubs">`; }
+    const authors = p.authors.map(a => a.replace(/\*$/,'')===ME ? `<span class="me">${esc(a)}</span>` : esc(a)).join(', ');
+    const links = Object.entries(p.links||{}).map(([k,u]) => `<a href="${esc(u)}">${LABELS[k]||k}</a>`).join('');
+    html += `<li><div class="t">${esc(p.title)}</div><div class="a">${authors}</div><div class="v"><em>${esc(p.venue)}</em></div><div class="l">${links}</div></li>`;
+  }
+  if (y!==null) html += '</ul>';
+  list.innerHTML = html || '<p>No publications match. Clear the search or choose All.</p>';
+  count.textContent = `${shown.length} of ${PUBS.length} publications`;
+}
+
+btns.forEach(b => b.addEventListener('click', () => {
+  type = b.dataset.type;
+  btns.forEach(x => x.setAttribute('aria-pressed', x===b));
+  render();
+}));
+q.addEventListener('input', render);
+render();
+</script>
+</body>
+</html>
